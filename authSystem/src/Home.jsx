@@ -1,8 +1,9 @@
+import DBUsers from "./DBUsers"
 
 const Home = () => {
     return (
         <div>
-            Home
+            <DBUsers/>
         </div>
     )
 }

@@ -1,9 +1,9 @@
 // import {useState} from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import SignUp from './SignUp'
 import { Routes, Route, BrowserRouter} from 'react-router-dom'
 import Login from './Login'
 import Home from './Home'
+import 'bootstrap/dist/css/bootstrap.min.css'
 // BroswerRouter,
 const App = () => {
 
@@ -12,7 +12,7 @@ const App = () => {
       <Routes>
         <Route path="/register" element={<SignUp />}></Route>
         <Route path="/login" element={<Login />}></Route>
-        <Route path="/home" element={<Home />}></Route>
+        <Route path="/" element={<Home />}></Route>
       </Routes>
     </BrowserRouter>
   )

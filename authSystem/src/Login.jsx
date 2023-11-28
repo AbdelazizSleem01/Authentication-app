@@ -15,11 +15,13 @@ const Login = () => {
         .then(result => {
             console.log(result)
             if(result.data === "Success"){
-                navigate('/home')
+                navigate('/')
             }
         })
         .catch(err => console.log(err))
     }
+
+    
 
     return (
         <div className='d-flex justify-content-center align-items-center bg-secondary vh-100'>
@@ -43,15 +45,14 @@ const Login = () => {
                                     Password
                                 </strong>
                             </label>
-                            <input className='form-control' type="password" name="password"  placeholder="Enter password" onChange={(e)=> setPassword(e.target.value)} required/>
+                            <input className='form-control' type="password" name="password" color='blue'  placeholder="Enter password" onChange={(e)=> setPassword(e.target.value)} required/>
                         </div>
                     </div>
                     <button type='submit' className='btn btn-warning w-100 '>
                         Login
                     </button>
                 </form>
-                <p>Already have an account</p>
-                <Link to="/register" type='submit' className='btn  w-100 bg-dark text-white text-decoration-none '>
+                <Link to="/register" type='submit' className='btn mt-2 w-100 bg-dark text-white text-decoration-none '>
                     Sign Up
                 </Link>
             </div>
