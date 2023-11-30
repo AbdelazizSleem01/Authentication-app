@@ -1,6 +1,6 @@
 # dependencies
 node_modules
-/clear.pnp
+clear.pnp
 .pnp.js
 
 # testing
