@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "install-start": "cd Server && node app.js",
+    "install-Server": "cd Server && npm install",
+    "install-authSystem": "cd authSystem && npm install",
+    "build-authSystem": "cd authSystem && npm run build ",
+    "start-authSystem": "cd authSystem && npm run dev "
   },
   "keywords": [],
   "author": "",

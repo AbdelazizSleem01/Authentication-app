@@ -3,6 +3,7 @@ const mongoose = require("mongoose")
 const cors = require("cors")
 const EmployeeModel = require("./models/Employee")
 const URL ="mongodb+srv://zezofalcon01:AZ01007488071az@dbbackend.jzoz9jx.mongodb.net/AuthSystem"
+const PORT = 3001
 
 
 
