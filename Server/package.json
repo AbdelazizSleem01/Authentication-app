@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "install-Server": "cd Server && npm install",
     "start-Server": "cd Server && node app.js",
     "install-authSystem": "cd authSystem && npm install",
