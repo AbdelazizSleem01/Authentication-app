@@ -2,17 +2,20 @@ const express = require("express")
 const mongoose = require("mongoose")
 const cors = require("cors")
 const EmployeeModel = require("./models/Employee")
-const URL ="mongodb+srv://zezofalcon01:AZ01007488071az@dbbackend.jzoz9jx.mongodb.net/AuthSystem"
-const PORT = 3001
 
 
 
+const corsOption ={
+    origin: "http://localhost:5173/"
+}
 
 const app = express()
 app.use(express.json())
-app.use(cors())
+app.use(cors(corsOption))
 
-mongoose.connect(URL)
+mongoose.connect(process.env.URL).then(()=>{
+    const PORT = process.env.PORT || 8000
+})
 
 
 app.get('/getUsers', (req, res) => {
@@ -60,5 +63,5 @@ app.post('/register', async (req, res) => {
 
 
 app.listen(PORT, () => {
-    console.log("Server is Running")
+    console.log(`Server is Running ${PORT}`)
 })

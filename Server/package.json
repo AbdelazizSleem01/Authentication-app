@@ -2,14 +2,14 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "install-server": "cd Server && npm install",
     "start-server": "cd Server && node app.js",
     "install-authSystem": "cd authSystem && npm install",
     "build-authSystem": "cd authSystem && npm run build ",
-    "start-authSystem": "cd authSystem && npm run start "
+    "start-authSystem": "cd authSystem && npm run dev "
   },
   "keywords": [],
   "author": "",
