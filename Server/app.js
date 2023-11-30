@@ -13,9 +13,14 @@ const app = express()
 app.use(express.json())
 app.use(cors(corsOption))
 
-mongoose.connect(process.env.URL).then(()=>{
+mongoose.connect(process.env.URI).then(() => {
     const PORT = process.env.PORT || 8000
-})
+    app.listen(PORT, () => {
+        console.log(`App is Listening on PORT ${PORT}`);
+    })
+}).catch(err => {
+    console.log(err);
+});
 
 
 app.get('/getUsers', (req, res) => {
@@ -61,7 +66,3 @@ app.post('/register', async (req, res) => {
 });
 
 
-
-app.listen(PORT, () => {
-    console.log(`Server is Running ${PORT}`)
-})
