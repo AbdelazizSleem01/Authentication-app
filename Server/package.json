@@ -1,5 +1,5 @@
 {
-  "name": "authenticarion",
+  "name": "authentication",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,8 @@
     "start-server": "cd server && node app.js",
     "install-client": "cd client && npm install",
     "build-client": "cd client && npm run build",
-    "start-client": "cd client && npm run dev"  },
+    "start-client": "cd client && npm run dev"  
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

@@ -1,8 +1,8 @@
 const express = require("express")
 const mongoose = require("mongoose")
 const cors = require("cors")
-require("dotenv").config();
 const EmployeeModel = require("./models/Employee")
+require("dotenv").config();
 // const URI = "mongodb+srv://zezofalcon01:AZ01007488071az@dbbackend.jzoz9jx.mongodb.net/AuthSystem"
 // PORT = 8080
 
@@ -16,7 +16,7 @@ app.use(express.json())
 app.use(cors(corsOption))
 
 mongoose.connect(process.env.MONGODB_URI).then(() => {
-    const PORT = process.env.PORT || 8000
+    const PORT = process.env.PORT || 4000
     app.listen(PORT, () => {
         console.log(`App is Listening on PORT ${PORT}`);
     })
@@ -67,8 +67,3 @@ app.post('/register', async (req, res) => {
     }
 });
 
-
-
-app.listen(PORT, () => {
-    console.log(`Server is Running ${PORT}`)
-})
