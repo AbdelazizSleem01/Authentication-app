@@ -9,7 +9,7 @@
     "start-server": "cd Server && node app.js",
     "install-authSystem": "cd authSystem && npm install",
     "build-authSystem": "cd authSystem && npm run build ",
-    "start-authSystem": "cd authSystem && npm run dev "
+    "start-authSystem": "cd authSystem && npm run start "
   },
   "keywords": [],
   "author": "",
