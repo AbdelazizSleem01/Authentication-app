@@ -3,18 +3,19 @@ const mongoose = require("mongoose")
 const cors = require("cors")
 require("dotenv").config();
 const EmployeeModel = require("./models/Employee")
-
+// const URI = "mongodb+srv://zezofalcon01:AZ01007488071az@dbbackend.jzoz9jx.mongodb.net/AuthSystem"
+// PORT = 8080
 
 
 const corsOption ={
-    origin: "http://localhost:5173/"
+    origin: "http://localhost:5174/"
 }
 
 const app = express()
 app.use(express.json())
 app.use(cors(corsOption))
 
-mongoose.connect(process.env.URI).then(() => {
+mongoose.connect(process.env.MONGODB_URI).then(() => {
     const PORT = process.env.PORT || 8000
     app.listen(PORT, () => {
         console.log(`App is Listening on PORT ${PORT}`);
@@ -67,3 +68,7 @@ app.post('/register', async (req, res) => {
 });
 
 
+
+app.listen(PORT, () => {
+    console.log(`Server is Running ${PORT}`)
+})

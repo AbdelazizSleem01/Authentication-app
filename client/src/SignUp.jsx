@@ -12,7 +12,7 @@ const SignUp = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:3001/register', { namef, namel, email, password })
+        axios.post('http://localhost:3030/register', { namef, namel, email, password })
             .then(result => {
                 console.log(result)
                 navigate('/login')
