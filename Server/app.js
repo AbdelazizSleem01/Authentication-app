@@ -4,7 +4,6 @@ const cors = require("cors")
 const EmployeeModel = require("./models/Employee")
 require("dotenv").config();
 // const URI = "mongodb+srv://zezofalcon01:AZ01007488071az@dbbackend.jzoz9jx.mongodb.net/AuthSystem"
-// PORT = 8080
 
 
 
