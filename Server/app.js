@@ -7,16 +7,14 @@ require("dotenv").config();
 // PORT = 8080
 
 
-const corsOption ={
-    origin: "http://localhost:5174/"
-}
+
 
 const app = express()
 app.use(express.json())
-app.use(cors(corsOption))
+app.use(cors())
 
 mongoose.connect(process.env.MONGODB_URI).then(() => {
-    const PORT = process.env.PORT || 4000
+    const PORT = process.env.PORT || 8000
     app.listen(PORT, () => {
         console.log(`App is Listening on PORT ${PORT}`);
     })

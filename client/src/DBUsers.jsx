@@ -7,7 +7,7 @@ const DBUsers = () => {
     const [users, setUsers] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:8000/getUsers')
+        axios.get('http://localhost:4000/getUsers')
             .then(users => setUsers(users.data))
             .catch(err => console.log(err))
     }, [])
