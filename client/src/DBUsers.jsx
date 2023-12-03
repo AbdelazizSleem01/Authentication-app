@@ -7,7 +7,7 @@ const DBUsers = () => {
     const [users, setUsers] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:4000/getUsers')
+        axios.get('https://authen-system-go59.onrender.com/getUsers')
             .then(users => setUsers(users.data))
             .catch(err => console.log(err))
     }, [])
