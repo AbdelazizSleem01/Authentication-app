@@ -14,7 +14,7 @@ const DBUsers = () => {
 
     return (
         <>
-        <div className='p-2 float-end'>
+        <div className='p-2 pb-5 float-end mb-5'>
             <Link to='/login' >
                 <button className='btn bg-success text-white  m-2  fw-bold'>login</button>
             </Link>
@@ -24,7 +24,7 @@ const DBUsers = () => {
         </div>
             <div className='w-100 vh-100 d-flex justify-content-center align-items-center'>
                 <div className='w-75'>
-                    <table className='table table-striped table-secondary table-bordered '>
+                    <table className='table table-striped table-secondary table-bordered table-hover'>
                         <thead>
                             <tr>
                                 <th  className='pe-5'>

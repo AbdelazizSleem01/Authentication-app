@@ -32,7 +32,6 @@ app.get('/getUsers', (req, res) => {
 app.post('/login', (req, res) => {
     const { email, password } = req.body
     EmployeeModel.findOne({ email: email })
-
         .then(user => {
             if (user) {
                 if (user.password === password) {
@@ -52,15 +51,16 @@ app.post('/register', async (req, res) => {
         const existingEmployee = await EmployeeModel.findOne({ email: req.body.email });
 
         if (existingEmployee) {
-            // Email already exists, show an alert
-            return res.status(400).json({ message: 'The email is already in use.' });
+            res.status(400).send({ 
+                message: 'The email is already in use' 
+            });
         }
 
         // If the email doesn't exist, create a new employee
         const newEmployee = await EmployeeModel.create(req.body);
         res.json(newEmployee);
     } catch (err) {
-        res.status(500).json({ message: 'Internal Server Error' });
+        res.status(500).send({ message: 'Internal Server Error' });
     }
 });
 
