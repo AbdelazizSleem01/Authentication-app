@@ -12,7 +12,7 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('https://authen-system-go59.onrender.com/login', { email, password })
+        axios.post('http://localhost:8080/login', { email, password })
             .then(result => {
                 console.log(result)
                 if (result.data === "Success") {

@@ -25,7 +25,7 @@ const SignUp = () => {
         } else if (password.length < 6) {
             toast.error("Please enter a valid password with at least 6 characters");
         } else {
-            axios.post('https://authen-system-go59.onrender.com/register', { namef, namel, email, password })
+            axios.post('http://localhost:8080/register', { namef, namel, email, password })
                 .then(result => {
                     console.log(result)
                     toast.success("Register Successfully!");
