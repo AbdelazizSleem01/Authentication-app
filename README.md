@@ -1,8 +1,8 @@
 
-Full Stack Authentication App
+#Full Stack Authentication App
 This is a Full Stack Authentication App built using Node.js for the backend and React with Vite for the frontend. The application provides user authentication functionality, allowing users to sign up, log in, and log out securely.
 
-Features
+#Features
 User Registration: Users can sign up with a valid email address and password.
 User Authentication: Secure authentication process for user logins.
 Protected Routes: Certain routes are protected and only accessible to authenticated users.
@@ -25,7 +25,7 @@ Prerequisites
 Node.js installed on your machine
 MongoDB set up
 
-Folder Structure
+#Folder Structure
 backend: Contains the Node.js and Express.js backend code.
 frontend: Contains the React with Vite frontend code.
 API Endpoints
@@ -36,5 +36,5 @@ Other endpoints as needed for your application.
 Contributing
 Contributions are welcome! If you'd like to contribute, please follow the contribution guidelines.
 
-License
+#License
 This project is licensed under the MIT License.Clone the repository:
