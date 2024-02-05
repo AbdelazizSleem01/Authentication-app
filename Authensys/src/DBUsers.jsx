@@ -7,7 +7,7 @@ const DBUsers = () => {
     const [users, setUsers] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:8080/getUsers')
+        axios.get('https://authentication-app-9fwy.onrender.com/getUsers')
             .then(users => setUsers(users.data))
             .catch(err => console.log(err))
     }, [])
